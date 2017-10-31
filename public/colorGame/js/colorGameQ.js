@@ -1,6 +1,5 @@
-/* global $ */
 var numSquares = 6;
-var colors = makeColCol(numSquares);
+var colors = [];
 var pickedColor;
 var squares = $('.square');
 var colorDisplay = $('#colorDisplay');
@@ -9,45 +8,30 @@ var h1 = $('h1');
 var resetButton = $('#reset');
 var modeBtn = $('.mode');
 
-console.log("CONNECTED");
-
 init();
 
 function init(){
-  repCode();
+  setUpModeBtn();
   setUpSquares();
+  repCode();
+
 }
 
 $(resetButton).click(function(){
   repCode();
 });
 
-for (var i = 0; i <modeBtn.length; i++){
-  $(modeBtn).click(function(){
-    [].forEach.call(modeBtn, function(x){ //modeBtn is not an array, its a collection of HTML jadi bisa di bikin menjadi array pake gitu.
-      $(x).removeClass('selected');
+function setUpModeBtn(){
+  for (var i = 0; i < modeBtn.length; i++){
+    $(modeBtn[i]).click(function(){
+      [].forEach.call(modeBtn, function(x){ //modeBtn is not an array, its a collection of HTML jadi bisa di bikin menjadi array pake gitu.
+        $(x).removeClass('selected');
+      });
+      $(this).addClass('selected');
+      this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
+      repCode();
     });
-    $(this).addClass('selected');
-    this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
-    repCode();
-  });
-}
-
-function repCode(){
-  colors = makeColCol(numSquares);
-  pickedColor = pickColor();
-  $(colorDisplay).text(pickedColor);
-  for (var i = 0; i < squares.length; i++){
-    if (colors[i]){
-      $(squares[i]).css({"display":"block"});
-      $(squares[i]).css({"background-color":colors[i]});
-    }else{
-      $(squares[i]).css({"display":"none"});
-    }
   }
-  $(h1).css({"background-color":"steelblue"});
-  $(messageDisplay).text(" ")
-  $(resetButton).text("New Game")
 }
 
 // set up all the squares and assign colors
@@ -59,13 +43,34 @@ function setUpSquares(){
         $(h1).css({"background-color":pickedColor});
         $(messageDisplay).text("Correct!")
         chgColor(clickedColor);
-        $(resetButton).text("Play Again?")
+        $(resetButton).text("Play Again?");
+        console.log("yes")
       }else{
         $(this).css({"background-color": "#232323"});
         $(messageDisplay).text("Wrong!")
+        console.log("no");
       }
     });
   }
+}
+
+function repCode(){
+  colors = makeColCol(numSquares);
+  pickedColor = pickColor();
+  $(colorDisplay).text(pickedColor);
+  $(h1).css({"background-color":"steelblue"});
+  $(messageDisplay).text(" ");
+  $(resetButton).text("New Game");
+  for (var i = 0; i < squares.length; i++){
+    if (colors[i]){
+      $(squares[i]).css({"display":"block"});
+      $(squares[i]).css({"background-color":colors[i]});
+    }else{
+      $(squares[i]).css({"display":"none"});
+    }
+  }
+  console.log(colors);
+  console.log(numSquares);
 }
 
 // change all the squares color if GUESSED CORRECTLY
@@ -92,8 +97,9 @@ function randomColor(){
 // make collections of random colors
 function makeColCol(x){
   var arr = []
-  for (var i = 0; i < x; i++){
-    arr.push(randomColor());
+  for (i = 0; i < x; i++){
+    arr.push(randomColor())
   }
+  console.log("arr "+ arr);
   return arr;
 }
