@@ -1,3 +1,5 @@
+/*global $*/
+
 var numSquares = 6;
 var colors = [];
 var pickedColor;
@@ -48,7 +50,7 @@ function setUpSquares(){
       }else{
         $(this).css({"background-color": "#232323"});
         $(messageDisplay).text("Wrong!")
-        console.log("no");
+        console.log("no"+ clickedColor);
       }
     });
   }
@@ -97,7 +99,7 @@ function randomColor(){
 // make collections of random colors
 function makeColCol(x){
   var arr = []
-  for (i = 0; i < x; i++){
+  for (var i = 0; i < x; i++){
     arr.push(randomColor())
   }
   console.log("arr "+ arr);
