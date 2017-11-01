@@ -16,7 +16,10 @@ $font-size:     14px;
     color: $color;
     line-height: $height;
     text-align: center;
-    margin: 0 auto;
+}
+
+@mixin roundCorner($rad){
+    border-radius: $rad;
 }
 
 body{
@@ -37,6 +40,7 @@ article{
 }
 
 header{
+    margin: 0 auto;
     @include circle(100%, 200px, 200px, $blue, white);
     h1{
         font-size: $font-size + 4;
@@ -48,4 +52,14 @@ footer{
     z-index: -4;
     position: relative;
     font-size: $font-size - 3;
+    margin: 0 auto;
+}
+
+a{
+    text-decoration: none;
+}
+
+.small-circle {
+    font-size: 10px;
+    @include circle(100%,50px, 50px, white , $blue);
 }
