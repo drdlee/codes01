@@ -16,6 +16,10 @@ app.get("/whichcolor", function(req, res) {
    res.render("colorGame/colorGame");
 });
 
+app.get("/dougie", function(req, res) {
+    res.render("dougie/dougie");
+})
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("PORTFOLIO STARTED");
 });
