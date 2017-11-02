@@ -26,9 +26,16 @@ $(resetButton).click(function(){
 function setUpModeBtn(){
   for (var i = 0; i < modeBtn.length; i++){
     $(modeBtn[i]).click(function(){
-      [].forEach.call(modeBtn, function(x){ //modeBtn is not an array, its a collection of HTML jadi bisa di bikin menjadi array pake gitu.
-        $(x).removeClass('selected');
-      });
+      // THREE SOLUTION ON REMOVING THE SELECTED CLASS
+      // [].forEach.call(modeBtn, function(x){ //modeBtn is not an array, its a collection of HTML jadi bisa di bikin menjadi array pake gitu.
+      //   $(x).removeClass('selected');
+      // });
+      // $(modeBtn).each(function(){
+      //   $(this).removeClass('selected');
+      // });
+      $.each(modeBtn, function(){
+        $(this).removeClass('selected');
+      })
       $(this).addClass('selected');
       this.textContent === "Easy" ? numSquares = 3: numSquares = 6;
       repCode();
