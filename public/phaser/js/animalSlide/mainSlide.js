@@ -1,18 +1,18 @@
 /*global Phaser*/
 var gameState = {
     preload: function(){
-        this.load.image('background','/phaser/assets/Tree-wallpaper-to-use-as-background-14-640x360.jpg');
-        this.load.image('arrow','/phaser/assets/arrow.png');
+        this.load.image('background','/phaser/assets/animalSlide/background02.jpg');
+        this.load.image('arrow','/phaser/assets/animalSlide/arrow-small.png');
         
-        this.load.spritesheet('catYellow','/phaser/assets/catYellow-spritesheet.png', 547, 481, 10);
-        this.load.spritesheet('catGray','/phaser/assets/catGray-spritesheet.png',542, 474, 10);
-        this.load.spritesheet('ninja','/phaser/assets/ninnin-spritesheet.png', 536, 495, 10);
-        this.load.spritesheet('robot','/phaser/assets/roboShoot-spritesheet.png', 567, 556, 4);
+        this.load.spritesheet('catYellow','/phaser/assets/animalSlide/catYellow-spritesheet.png', 547, 481, 10);
+        this.load.spritesheet('catGray','/phaser/assets/animalSlide/catGray-spritesheet.png',542, 474, 10);
+        this.load.spritesheet('ninja','/phaser/assets/animalSlide/ninnin-spritesheet.png', 536, 495, 10);
+        this.load.spritesheet('robot','/phaser/assets/animalSlide/roboShoot-spritesheet.png', 567, 556, 4);
         
-        this.load.audio('catYellowSnd', '/phaser/assets/cat01.mp3');
-        this.load.audio('catGraySnd', '/phaser/assets/cat02.mp3');
-        this.load.audio('ninjaSnd', '/phaser/assets/ninja.mp3');
-        this.load.audio('robotSnd', '/phaser/assets/robot.mp3');
+        this.load.audio('catYellowSnd', '/phaser/assets/animalSlide/cat01.mp3');
+        this.load.audio('catGraySnd', '/phaser/assets/animalSlide/cat02.mp3');
+        this.load.audio('ninjaSnd', '/phaser/assets/animalSlide/ninja.mp3');
+        this.load.audio('robotSnd', '/phaser/assets/animalSlide/robot.mp3');
     },
     create: function(){
         this.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -124,7 +124,7 @@ var gameState = {
         var style = {
             font: 'bold 30pt Arial',
             fill: '#D0171B',
-            align: 'center'}
+            align: 'center'};
         if(!this.animalText){
             this.animalText = this.game.add.text(this.game.world.width/2, this.game.world.height * 0.85, '', style);
             this.animalText.anchor.setTo(0.5);

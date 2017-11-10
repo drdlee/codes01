@@ -18,7 +18,35 @@ app.get("/whichcolor", function(req, res) {
 
 app.get("/dougie", function(req, res) {
     res.render("dougie/dougie");
-})
+});
+
+app.get("/pixi", function(req, res) {
+    res.render("pixi/pixi");
+});
+
+app.get("/phaser", function(req, res) {
+    res.render("phaser/index");
+});
+
+app.get("/phaser/slide-show-01", function(req, res) {
+    res.render("phaser/index-01");
+});
+
+app.get("/phaser/petGame", function(req, res) {
+    res.render("phaser/index-02");
+});
+
+app.get("/phaser/platformer01", function(req, res) {
+    res.render("phaser/index-03");
+});
+
+app.get("/pixi/mario", function(req, res) {
+    res.render("pixi/mario/superMario");
+});
+
+app.get("/phaser/dontCrush", function(req, res) {
+    res.render("phaser/dontCrush");
+});
 
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("PORTFOLIO STARTED");

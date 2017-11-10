@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Platformer 01</title>
+	    <script type="text/javascript" src="/phaser/js/phaser.min.js"></script>
+    </head>
+    <body>
+        <script type="text/javascript" src="/phaser/js/platformer01/boot.js"></script>
+        <script type="text/javascript" src="/phaser/js/platformer01/preload.js"></script>
+        <script type="text/javascript" src="/phaser/js/platformer01/mainMenu.js"></script>
+        <script type="text/javascript" src="/phaser/js/platformer01/level1.js"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                var game = new Phaser.Game(800,600,Phaser.AUTO);
+                
+                game.state.add('boot',Game.boot);
+                game.state.add('preloader',Game.preloader);
+                game.state.add('mainMenu',Game.mainMenu);
+                game.state.add('level1',Game.level1);
+                
+                game.state.start('boot');
+            };
+        </script>
+    </body>
+</html>

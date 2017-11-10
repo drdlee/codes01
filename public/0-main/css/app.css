@@ -1,4 +1,53 @@
+@font-face {
+  font-family: "Press Start";
+  src: url(/0-main/fonts/PressStart2P.ttf); }
+@font-face {
+  font-family: "Minecraft";
+  src: url(/0-main/fonts/Minecraft-Regular.ttf); }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "Minecraft";
+  background-color: black; }
+
 h1 {
-  color: orange; 
-  background-color: pink;
-}
+  font-family: "Press Start";
+  font-size: 20px;
+  color: #fefffb; }
+
+.rep {
+  background-image: url(/0-main/img/topBot.png); }
+
+.game-box {
+  margin: 0 auto;
+  max-width: 659px;
+  overflow: hidden; }
+
+img {
+  margin: 0 auto;
+  display: block; }
+
+.content {
+  margin: 60px auto;
+  max-width: 800px;
+  background-color: black;
+  text-align: center;
+  font-family: "Press Start";
+  font-size: 14px; }
+
+a:link,
+a:visited {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  display: inline-block;
+  margin-top: 30px; }
+
+li {
+  float: left;
+  margin: 0 40px;
+  text-align: center; }
+
+/*# sourceMappingURL=app.css.map */
