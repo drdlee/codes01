@@ -12,7 +12,7 @@ var gameState = {
         this.RUNNING_SPEED = 200;
         this.JUMPING_SPEED = 600;
         this.BARREL_FREQ = 5;
-        this.BARREL_SPEED = 120;
+        this.BARREL_SPEED = 60;
     },
     create: function(){
         this.ground = this.add.sprite(0, 651, 'ground');
