@@ -1,26 +1,35 @@
 $font-opneSans: 'Open Sans', sans-serif
 $font-raleway: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif
-$red: #d73f22
+$blue: #019193
+$blue02: #036d72
 $blueIshWhite: #fefffb
+$dimWhite: #d5d5d5
 
 @font-face 
     font-family: "Press Start"
     src: url(/0-main/fonts/PressStart2P.ttf)
 @font-face 
-    font-family: "Minecraft"
-    src: url(/0-main/fonts/Minecraft-Regular.ttf)
+    font-family: "SFPixelate"
+    src: url(/0-main/fonts/SFPixelate.ttf)
 
 body
     margin: 0
     padding: 0
     height: 100%
-    font-family: "Minecraft"
+    font-family: "SFPixelate"
+    color: $dimWhite
     background-color: black
 
-h1
+h1,
+h2
     font-family: "Press Start"
-    font-size: 20px
+    font-size: 25px
     color: $blueIshWhite
+    text-shadow: 4px 4px $blue02
+    text-align: center
+h2
+    font-size: 18px
+    
 
 .rep
     background:
@@ -40,21 +49,46 @@ img
     max-width: 800px
     background:
         color: black
-    text-align: center
-    font-family: "Press Start"
     font-size: 14px
-    
+
+.container01
+    a
+        font-family: "Press Start"
         
+.container02
+    
+
 a:link,
 a:visited
     text-decoration: none
+    color: $blue
 
 ul
+    text-align: center
     list-style: none
-    display: inline-block
-    margin-top: 30px
+    display: block
+    margin-top: -10px
 
 li
-    float: left
     margin: 0 40px
-    text-align: center
+    text-align: left
+    
+i
+    font-size: 200%
+    margin-right: 10px
+    
+.ion-social-html5
+    &:hover
+        color: #e34f26
+        
+.ion-social-css3
+    &:hover
+        color: #1191D0
+        
+.ion-social-sass
+    &:hover
+        color: #EA4C89
+        
+.ion-social-javascript
+    &:hover
+        color: yellow
