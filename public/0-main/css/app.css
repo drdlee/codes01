@@ -41,6 +41,12 @@ img {
   background-color: black;
   font-size: 14px; }
 
+.githublink {
+  text-align: right; }
+  .githublink a:visited,
+  .githublink a:link {
+    color: #fefffb; }
+
 .container01 a {
   font-family: "Press Start"; }
 
