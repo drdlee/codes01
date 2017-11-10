@@ -40,6 +40,10 @@ app.get("/phaser/platformer01", function(req, res) {
     res.render("phaser/index-03");
 });
 
+app.get("/phaser/platformer", function(req,res){
+   res.render("phaser/platformer");
+});
+
 app.get("/pixi/mario", function(req, res) {
     res.render("pixi/mario/superMario");
 });
