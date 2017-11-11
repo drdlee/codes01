@@ -12,7 +12,7 @@ var gameState = {
         this.RUNNING_SPEED = 200;
         this.JUMPING_SPEED = 600;
         this.BARREL_FREQ = 5;
-        this.BARREL_SPEED = 60;
+        this.BARREL_SPEED = 70;
     },
     create: function(){
         this.ground = this.add.sprite(0, 651, 'ground');
@@ -70,7 +70,7 @@ var gameState = {
         this.game.physics.arcade.collide(this.barrels, this.ground);
         this.game.physics.arcade.collide(this.barrels, this.platforms);
         this.game.physics.arcade.overlap(this.player, this.fires, this.killPlayer);
-        // this.game.physics.arcade.overlap(this.player, this.barrels, this.killPlayer);
+        this.game.physics.arcade.overlap(this.player, this.barrels, this.killPlayer);
         this.game.physics.arcade.overlap(this.player, this.gorilla, this.win);
         
         this.player.body.velocity.x = 0;
