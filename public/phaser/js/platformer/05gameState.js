@@ -104,9 +104,9 @@ var gameState = {
         console.log('landed')
     },
     onScreenButtons: function(){
-        this.leftArrow = this.add.button(20, 679, 'arrowButton');
-        this.rightArrow = this.add.button(110, 679, 'arrowButton');
-        this.actionButton = this.add.button(280, 679, 'actionButton');
+        this.leftArrow = this.add.button(20, 590, 'arrowButton');
+        this.rightArrow = this.add.button(110, 590, 'arrowButton');
+        this.actionButton = this.add.button(280, 590, 'actionButton');
         
         this.leftArrow.alpha = 0.5;
         this.rightArrow.alpha = 0.5;
